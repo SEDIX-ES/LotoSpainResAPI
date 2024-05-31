@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LotoSpainAPI", "LotoSpainAPI.csproj", "{68E5614C-3634-46A2-9928-8075ACD54B9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68E5614C-3634-46A2-9928-8075ACD54B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E5614C-3634-46A2-9928-8075ACD54B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E5614C-3634-46A2-9928-8075ACD54B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E5614C-3634-46A2-9928-8075ACD54B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E687BC29-7746-4327-AF19-CE6F54819CD0}
+	EndGlobalSection
+EndGlobal
