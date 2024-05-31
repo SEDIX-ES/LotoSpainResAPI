@@ -8,6 +8,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 
-ENV ASPNETCORE_ENVIRONMENT Production
 
-ENTRYPOINT [ "dotnet", "LotoSpainAPI.dll" ]
+ENV ASPNETCORE_ENVIRONMENT Production
+ENTRYPOINT ["dotnet", "LotoSpainAPI.dll"]
