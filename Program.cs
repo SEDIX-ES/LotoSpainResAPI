@@ -1,6 +1,7 @@
 using LotoSpain_API.Datos;
 using Microsoft.EntityFrameworkCore;
 using MySql.Data.MySqlClient;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,7 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder.AllowAnyOrigin(); // Permite cualquier origen
-            builder.AllowAnyMethod(); // Permite cualquier método HTTP
+            builder.AllowAnyMethod(); // Permite cualquier mÃ©todo HTTP
             builder.AllowAnyHeader(); // Permite cualquier header
         });
 });
@@ -28,6 +29,14 @@ builder.Services.AddDbContext<ApplicationDBContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), options => options.CommandTimeout(180));
 });
+
+// Se configura Kestrel para escuchar en el puerto especificado por la variable de entorno PORT, o 8080 por defecto
+string port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(int.Parse(port));
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
